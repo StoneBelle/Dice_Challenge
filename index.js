@@ -1,15 +1,20 @@
 
-//Generates a random number 
-var randomNumber1 = Math.random()
-
-randomNumber1 = randomNumber1 * 6;  // 
+//Generates a random number for each player
+randomNumber1 = Math.random();
+randomNumber1 = randomNumber1 * 6;  
 randomNumber1 = Math.floor(randomNumber1);
 randomNumber1 ++ ;
 
-var dice_p1 = "images/dice" + randomNumber1 + ".png";
+
+randomNumber2 = Math.floor(Math.random() * 6 ) + 1
+
+// Changes image of dice for each player
+let p1_dice = "images/dice" + randomNumber1 + ".png";
+let p2_dice = "images/dice" + randomNumber2 + ".png";
+
+document.querySelector('.img1').setAttribute("src", p1_dice);
+document.querySelector('.img2').setAttribute("src", p2_dice);
 
 
-alert(dice_p1);
-document.querySelector('img1').setAttribute("src", dice_p1);
-
-
+// let image1 = document.querySelector("img")[0];
+// image1.setAttribute("src", p1_dice);
